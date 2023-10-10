@@ -45,14 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-strides
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import strides from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-strides@esm/index.mjs';
+var strides = require( '@stdlib/ndarray-base-strides' );
 ```
 
 #### strides( x, copy )
@@ -60,27 +76,27 @@ import strides from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-strides@
 Returns the strides of a provided [ndarray][@stdlib/ndarray/base/ctor].
 
 ```javascript
-import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@esm/index.mjs';
+var zeros = require( '@stdlib/ndarray-zeros' );
 
 var x = zeros( [ 3, 2, 3 ] );
 // returns <ndarray>
 
-var sh = strides( x, false );
+var st = strides( x, false );
 // returns [ 6, 3, 1 ]
 ```
 
 When `copy` is `false`, changes to the returned strides array may mutate the input [ndarray][@stdlib/ndarray/base/ctor] strides. If there is a chance that the returned strides will be mutated (either directly or by downstream consumers), set `copy` to `true` to prevent unintended side effects.
 
 ```javascript
-import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@esm/index.mjs';
+var zeros = require( '@stdlib/ndarray-zeros' );
 
 var x = zeros( [ 3, 2, 3 ] );
 // returns <ndarray>
 
-var sh = strides( x, true );
+var st = strides( x, true );
 // returns [ 6, 3, 1 ]
 
-var bool = ( x.strides === sh );
+var bool = ( x.strides === st );
 // returns false
 ```
 
@@ -106,17 +122,12 @@ var bool = ( x.strides === sh );
 
 <!-- eslint-disable new-cap -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@esm/index.mjs';
-import slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice@esm/index.mjs';
-import E from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@esm/index.mjs';
-import S from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@esm/index.mjs';
-import strides from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-strides@esm/index.mjs';
+```javascript
+var zeros = require( '@stdlib/ndarray-zeros' );
+var slice = require( '@stdlib/ndarray-slice' );
+var E = require( '@stdlib/slice-multi' );
+var S = require( '@stdlib/slice-ctor' );
+var strides = require( '@stdlib/ndarray-base-strides' );
 
 // Create an array:
 var x = zeros( [ 10, 10, 10, 10 ] );
@@ -147,10 +158,6 @@ for ( i = 0; i < slices.length; i++ ) {
     s = slice( x, slices[ i ] );
     console.log( '(%s) => (%s)', x.strides.join( ',' ), strides( s, false ).join( ',' ) );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -182,7 +189,7 @@ for ( i = 0; i < slices.length; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -242,7 +249,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-base-strides/main/LICENSE
 
-[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/stdlib/tree/esm
+[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/stdlib
 
 </section>
 
