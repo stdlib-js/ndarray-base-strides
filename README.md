@@ -81,7 +81,7 @@ var zeros = require( '@stdlib/ndarray-zeros' );
 var x = zeros( [ 3, 2, 3 ] );
 // returns <ndarray>
 
-var sh = strides( x, false );
+var st = strides( x, false );
 // returns [ 6, 3, 1 ]
 ```
 
@@ -93,10 +93,10 @@ var zeros = require( '@stdlib/ndarray-zeros' );
 var x = zeros( [ 3, 2, 3 ] );
 // returns <ndarray>
 
-var sh = strides( x, true );
+var st = strides( x, true );
 // returns [ 6, 3, 1 ]
 
-var bool = ( x.strides === sh );
+var bool = ( x.strides === st );
 // returns false
 ```
 
