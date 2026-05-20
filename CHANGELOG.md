@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`1a5e918`](https://github.com/stdlib-js/stdlib/commit/1a5e918630d60846c8a45a1f51687ed441c54dbe) - **bench:** refactor to use string interpolation in `ndarray/base` [(#11437)](https://github.com/stdlib-js/stdlib/pull/11437) _(by Karan Anand)_
 -   [`0a917be`](https://github.com/stdlib-js/stdlib/commit/0a917be06f551443b9182813d5110711eefffae9) - **fix:** fallback to default order when computing strides _(by Athan Reines)_
 
 </details>
@@ -34,9 +35,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Karan Anand
 
 </section>
 
