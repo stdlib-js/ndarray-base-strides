@@ -40,6 +40,7 @@
     "@stdlib/array-base-copy-indexed": "^0.2.3",
     "@stdlib/assert-is-string": "^0.2.3",
     "@stdlib/ndarray-base-shape2strides": "^0.2.3",
+    "@stdlib/ndarray-defaults": "^0.4.1",
     "@stdlib/types": "^0.4.3"
   },
   "devDependencies": {
